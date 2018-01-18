@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>Edit Cat</title>
+</head>
+<body>
+<div id="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h2>Cats</h2>
+         <h4><a href="/">See other cats</a></h4>
+      </div>
+    </div>
+    <div class="panel-body">
+    <form action="/cats/<%= cat[0].id %>" method="post">
+      
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" name="name" value="<%= cat.name%>">
+        </p>
+        <p>
+            <label for="age">Age:</label>
+            <input type="integer" name="age" value="<%= cat[0].age %>">
+        </p>
+        <p>
+            <label for="size">Size:</label>
+            <select name="size">
+            <option selected="select" value="<%= cat[0].size %>"><%= cat[0].size%></option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            </select>
+        </p>
+        <input type="submit" class="btn btn-default" value="Update">
+    </form>
+    </div>
+    
+</div>
+</body>
+</html>

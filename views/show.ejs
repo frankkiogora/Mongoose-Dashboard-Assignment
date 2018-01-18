@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>Cat</title>
+</head>
+<body>
+<div id="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h2><%= cat[0].name %></h2>
+         <h4><a href="/">See other cats</a></h4>
+      </div>
+    </div>
+    <div class="panel-body">
+    <h4>More about <%= cat[0].name %>:</h4>
+    <ul>
+        
+        <li>Age: <%= cat[0].age %></li>
+        <li>Size: <%= cat[0].size %></li>
+    </ul>
+    <button class="btn btn-default"><a href="/<%= cat[0].id %>/edit">Edit</a></button>
+
+    <form action="/<%= cat[0].id %>/destroy" method="post">
+        <input type="submit" value="Delete" class="btn btn-default">
+    </form> 
+       
+    </div>
+    
+</div>
+</body>
+</html>
